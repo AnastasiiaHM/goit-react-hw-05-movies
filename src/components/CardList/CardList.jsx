@@ -1,6 +1,6 @@
 import { getTrendingMovies } from 'components/API';
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Container, List, Item, FilmName, Links } from './CardList.styled';
 
 const CardList = () => {
@@ -21,13 +21,13 @@ const CardList = () => {
   return (
     <Container>
       <List>
-        {list.map(({ id, poster_path, original_title, title }) => {
+        {list.map(({ id, poster_path, original_title }) => {
           return (
             <Item key={id}>
               <Links to={`movies/${id}`} state={{ from: location }}>
                 <img
                   src={`https://image.tmdb.org/t/p/w200${poster_path}`}
-                  alt={title}
+                  alt={original_title}
                 />
                 <FilmName>{original_title}</FilmName>
               </Links>

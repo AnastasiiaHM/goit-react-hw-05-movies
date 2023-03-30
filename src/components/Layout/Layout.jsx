@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Header, Nav, WrapperLink, NavLinks, Mains } from './Layout.styled';
 import Spiner from '../Spinner/Spiner';
