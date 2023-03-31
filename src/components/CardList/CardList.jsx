@@ -21,13 +21,13 @@ const CardList = () => {
   return (
     <Container>
       <List>
-        {list.map(({ id, poster_path, original_title }) => {
+        {list.map(({ id, poster_path, original_title, title }) => {
           return (
             <Item key={id}>
               <Links to={`movies/${id}`} state={{ from: location }}>
                 <img
                   src={`https://image.tmdb.org/t/p/w200${poster_path}`}
-                  alt={original_title}
+                  alt={title}
                 />
                 <FilmName>{original_title}</FilmName>
               </Links>
@@ -35,7 +35,6 @@ const CardList = () => {
           );
         })}
       </List>
-      <img />
     </Container>
   );
 };
