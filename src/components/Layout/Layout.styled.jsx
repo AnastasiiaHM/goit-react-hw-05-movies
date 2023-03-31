@@ -37,6 +37,5 @@ export const NavLinks = styled(NavLink)`
 export const Mains = styled.main`
   width: 100vw;
   height: 100vh;
-  background-color: #383838;
-  background-image: url('../../images/background.jpg');
+  background-color: #38383847;
 `;

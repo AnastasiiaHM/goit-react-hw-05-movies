@@ -5,7 +5,6 @@ export const List = styled.ul`
   gap: 30px 10px;
   justify-content: center;
   list-style: none;
-  background-color: #383838;
 `;
 export const Item = styled.li`
   flex-basis: 150px;
@@ -13,6 +12,7 @@ export const Item = styled.li`
 export const Img = styled.img`
   margin-bottom: 5px;
   border-radius: 4px;
+  max-width: 200px;
 `;
 
 export const Name = styled.h3`

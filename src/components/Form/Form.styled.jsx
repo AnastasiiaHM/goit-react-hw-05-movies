@@ -56,11 +56,11 @@ export const SearchFormInput = styled.input`
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
+  color: #ebfa67cc;
   background-color: transparent;
   ::placeholder {
-    font: inherit;
     font-size: 18px;
-    color: #ddd8d8;
+    color: #f0fa97;
   }
 `;
 export const ListMovie = styled.ul`

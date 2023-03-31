@@ -3,6 +3,7 @@ import { getCastMovie } from 'components/API';
 import { useParams } from 'react-router-dom';
 import { List, Item, Img, Name, Character } from './Cast.styled';
 import Spiner from 'components/Spinner/Spiner';
+import Seats from '../../images/Seats.png';
 
 const CastComponent = () => {
   const [cast, setCast] = useState([]);
@@ -24,6 +25,9 @@ const CastComponent = () => {
   if (isActive) {
     return <Spiner />;
   }
+  if (cast.length === 0) {
+    <Name>Sorry but we don`t have cast</Name>;
+  }
 
   return (
     <div>
@@ -32,7 +36,11 @@ const CastComponent = () => {
           return (
             <Item key={id}>
               <Img
-                src={`https://image.tmdb.org/t/p/w200${profile_path}`}
+                src={
+                  profile_path
+                    ? `https://image.tmdb.org/t/p/w200${profile_path}`
+                    : Seats
+                }
                 alt={name}
               />
               <Name>{name}</Name>

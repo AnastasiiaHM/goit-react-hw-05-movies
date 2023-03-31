@@ -10,7 +10,7 @@ const MoviesDetails = () => {
   const { movieId } = useParams();
   const [film, setFilm] = useState({});
 
-  const backLink = useRef(location.state?.from ?? '/movies');
+  const backLink = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
     async function fetch() {

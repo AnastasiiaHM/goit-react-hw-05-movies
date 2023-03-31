@@ -14,5 +14,5 @@ export const Content = styled.h3`
 `;
 export const List = styled.ul`
   list-style: none;
-  background-color: #383838;
+  background-color: #38383852;
 `;
